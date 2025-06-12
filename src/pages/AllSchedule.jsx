@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const AllSchedule = () => {
@@ -66,7 +66,9 @@ const AllSchedule = () => {
                 <td>{data?.dayName}</td>
                 <td>{data?.time}</td>
                 <td>
-                  <button className="btn mr-2">E</button>
+                  <Link to={`/update/${data?._id}`}>
+                    <button className="btn mr-2">E</button>
+                  </Link>
                   <button
                     onClick={() => handleDelate(data?._id)}
                     className="btn mr-2"

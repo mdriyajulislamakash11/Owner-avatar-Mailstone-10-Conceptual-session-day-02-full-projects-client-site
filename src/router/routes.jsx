@@ -4,6 +4,7 @@ import AddSchedule from "../pages/AddSchedule";
 import Home from "../pages/Home";
 import AllSchedule from "../pages/AllSchedule";
 import SignIn from "../pages/SignIn";
+import Updated from "../pages/Updated";
 
 const routes = createBrowserRouter([
   {
@@ -15,16 +16,21 @@ const routes = createBrowserRouter([
             element: <Home />
         },
         {
-            path: "addSchedule",
+            path: "/addSchedule",
             element: <AddSchedule />
         },
         {
-            path: "allSchedule",
+            path: "/allSchedule",
             element: <AllSchedule />,
             loader: () => fetch(`http://localhost:5000/schedule`)
         },
         {
-            path: "signIn",
+            path: "/update/:id",
+            element: <Updated />,
+            loader: ({params}) => fetch(`http://localhost:5000/schedule/${params?.id}`)
+        },
+        {
+            path: "/signIn",
             element: <SignIn />
         },
     ],
