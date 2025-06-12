@@ -13,7 +13,7 @@ const MainLayouts = () => {
                 <Navber />
             </div>
 
-            <div className=''>
+            <div className='w-11/12 mx-auto my-7'>
                 <Outlet />
             </div>
 
