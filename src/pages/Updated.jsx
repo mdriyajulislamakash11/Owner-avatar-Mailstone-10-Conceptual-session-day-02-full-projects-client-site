@@ -19,7 +19,7 @@ const Updated = () => {
     console.log(updateData);
 
     // put methods api:
-    fetch(`http://localhost:5000/schedule/${_id}`, {
+    fetch(`https://server2-eight-khaki.vercel.app/schedule/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

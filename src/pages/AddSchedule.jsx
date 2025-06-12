@@ -22,7 +22,7 @@ const AddSchedule = () => {
     // form.reset();
 
     // post methods
-    fetch("http://localhost:5000/schedule", {
+    fetch("https://server2-eight-khaki.vercel.app/schedule", {
         method: "POST",
         headers: {
             "content-type" : "application/json"

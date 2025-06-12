@@ -22,12 +22,12 @@ const routes = createBrowserRouter([
         {
             path: "/allSchedule",
             element: <AllSchedule />,
-            loader: () => fetch(`http://localhost:5000/schedule`)
+            loader: () => fetch(`https://server2-eight-khaki.vercel.app/schedule`)
         },
         {
             path: "/update/:id",
             element: <Updated />,
-            loader: ({params}) => fetch(`http://localhost:5000/schedule/${params?.id}`)
+            loader: ({params}) => fetch(`https://server2-eight-khaki.vercel.app/schedule/${params?.id}`)
         },
         {
             path: "/signIn",

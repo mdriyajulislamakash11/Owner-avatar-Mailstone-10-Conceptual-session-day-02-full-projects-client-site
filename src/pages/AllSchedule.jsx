@@ -11,7 +11,7 @@ const AllSchedule = () => {
   // 🔍 Search API Call
   useEffect(() => {
     if (searchTrigger) {
-      fetch(`http://localhost:5000/schedule?searchParams=${search}`)
+      fetch(`https://server2-eight-khaki.vercel.app/schedule?searchParams=${search}`)
         .then((res) => res.json())
         .then((data) => {
           setSchedules(data);
@@ -32,7 +32,7 @@ const AllSchedule = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/schedule/${_id}`, {
+        fetch(`https://server2-eight-khaki.vercel.app/schedule/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
