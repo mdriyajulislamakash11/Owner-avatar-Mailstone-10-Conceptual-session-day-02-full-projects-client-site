@@ -1,5 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import Navber from '../pages/Navber';
 
 const MainLayouts = () => {
 
@@ -9,7 +10,7 @@ const MainLayouts = () => {
             
             {/* navber */}
             <div className=''>
-
+                <Navber />
             </div>
 
             <div className=''>
