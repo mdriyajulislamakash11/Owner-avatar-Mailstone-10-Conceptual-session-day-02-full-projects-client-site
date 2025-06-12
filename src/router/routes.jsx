@@ -20,7 +20,8 @@ const routes = createBrowserRouter([
         },
         {
             path: "allSchedule",
-            element: <AllSchedule />
+            element: <AllSchedule />,
+            loader: () => fetch(`http://localhost:5000/schedule`)
         },
         {
             path: "signIn",
